@@ -35,7 +35,7 @@ class _CalculatorUiState extends State<CalculatorUi> {
      if(input.isNotEmpty) {
        var userInput = input;
        userInput = input.replaceAll("X", "*");
-       Parser p = Parser();
+       GrammarParser p = GrammarParser();
        Expression expression = p.parse(userInput);
        ContextModel contextModel = ContextModel();
        var finalValue = expression.evaluate(EvaluationType.REAL, contextModel);
